@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "2captcha": "^2.1.5-2",
+    "2captcha-node": "^2.2.1",
     "@sendgrid/mail": "^7.4.2",
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.5",
@@ -19,9 +21,12 @@
     "nodemon": "^2.0.7",
     "price-finder": "^5.0.2",
     "price-monitoring": "^1.0.9",
+    "promise-poller": "^1.9.1",
     "puppeteer": "^5.5.0",
     "puppeteer-extra": "^3.1.16",
-    "puppeteer-extra-plugin-stealth": "^2.6.7"
+    "puppeteer-extra-plugin-stealth": "^2.6.7",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9"
   },
   "devDependencies": {
     "dotenv": "^8.2.0"
