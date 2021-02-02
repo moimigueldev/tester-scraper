@@ -4,7 +4,7 @@ const { del } = require('request');
 
 const url = 'https://www.keyhero.com/free-typing-test/';
 
-async function start(counter) {
+async function start() {
   const browser = await puppeteer.launch({
     headless: false,
     slowMo: 10,
@@ -14,12 +14,12 @@ async function start(counter) {
 
   await page.goto(url, { waitUntil: 'networkidle2' });
 
-  await signin(page);
-  console.log('done login in...');
+  //   await signin(page);
+  //   console.log('done login in...');
 
-  loop(page, counter);
+  loop(page, 10);
 
-  await browser.close();
+  //   await browser.close();
 }
 
 function delay(time) {
@@ -71,7 +71,7 @@ async function loop(page, counter) {
     console.log(process.env.QUOTE);
 
     await page.type('input.user-input-text', process.env.QUOTE, {
-      delay: Math.floor(Math.random() * 10) + 20,
+      delay: 0.0000001,
     });
 
     let results = await page.$eval(
@@ -84,4 +84,4 @@ async function loop(page, counter) {
   }
 }
 
-start(10);
+start();
